@@ -3,6 +3,4 @@
 
 address=`unit-get private-address`
 juju-log "db-relation-joined: address: $address"
-status-set active "relation joined. address: $address"
 relation-set hostname=$address port=4001
-
