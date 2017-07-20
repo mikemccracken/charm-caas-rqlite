@@ -1,3 +1,6 @@
 #!/bin/bash
 
-relation-set hostname="FOO" port=4001
+address=`unit-get private-address`
+juju-log "db-relation-joined: address: $address"
+status-set active "relation joined. address: $address"
+relation-set hostname=$address port=4000
