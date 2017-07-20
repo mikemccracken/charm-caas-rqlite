@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: rqlite-service
+spec:
+  selector:
+    juju-app-name: rqlite
+  ports:
+    - protocol: TCP
+      port: 4001
+      nodePort: 30000
+  type: NodePort
